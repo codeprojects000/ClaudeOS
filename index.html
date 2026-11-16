@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mój System</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="os">
+  <div id="desk"></div>
+  <div id="icons" role="group" aria-label="Pulpit"></div>
+  <div id="wins"></div>
+  <div id="startmenu" class="pop" hidden></div>
+  <div id="cal" class="pop" hidden></div>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="taskbar">
+    <div id="dock"><button id="startbtn" class="startbtn" aria-label="Menu Start" aria-expanded="false">
+      <svg viewBox="0 0 120 120" width="24" height="24" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M40 44L24 60l16 16M80 44l16 16-16 16"/><path d="M60 46l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="currentColor" stroke="none"/></svg>
+    </button>
+    <div id="tasks"></div></div>
+    <button id="tray" class="tray" aria-label="Kalendarz"><span id="tm"></span><span id="dt"></span></button>
+  </div>
+  <div id="asst" hidden>
+    <div id="as-chat" class="as-chat" role="dialog" aria-label="Asystent Iskra" hidden>
+      <div class="as-h"><strong>Iskra</strong><span class="as-sub">asystent systemu</span><button id="as-x" class="ib" aria-label="Zamknij czat">✕</button></div>
+      <div id="as-log" class="as-log" aria-live="polite"></div>
+      <div id="as-chips" class="as-chips"></div>
+      <form id="as-form" class="as-form"><input id="as-in" class="inp" placeholder="Napisz do Iskry…" autocomplete="off" aria-label="Wiadomość"><button class="btn pri" type="submit">Wyślij</button></form>
+    </div>
+    <div id="as-bub" class="as-bub" hidden></div>
+    <button id="as-av" class="as-av" aria-label="Asystent Iskra, otwórz czat"><span class="as-head"><span class="as-eyes"><i class="as-eye"></i><i class="as-eye"></i></span></span></button>
+  </div>
+  <div id="login" class="lg" hidden>
+    <div class="lg-in">
+      <div><div id="lg-t"></div><div id="lg-d"></div></div>
+      <form id="lg-form" class="lg-card" autocomplete="off">
+        <div id="lg-av" class="lg-av"></div>
+        <h2 id="lg-h" class="lg-h"></h2>
+        <p id="lg-sub" class="hint"></p>
+        <div id="lg-avs" class="sw" style="justify-content:center" hidden></div>
+        <label for="lg-name" id="lg-namel" class="lbl">Nazwa użytkownika</label>
+        <input id="lg-name" class="inp" maxlength="24">
+        <label for="lg-pw" id="lg-pwl" class="lbl">Hasło</label>
+        <input id="lg-pw" class="inp" type="password" maxlength="40" autocomplete="off">
+        <div id="lg-err" class="err" role="alert"></div>
+        <button id="lg-go" class="btn pri" type="submit">Zaloguj</button>
+        <button id="lg-reset" class="lg-link" type="button">Nie pamiętasz hasła? Zresetuj system</button>
+      </form>
+    </div>
+  </div>
+  <div id="boot" class="boot">
+    <div id="bt-power" class="bt-power">
+      <div id="bt-logo0"></div>
+      <button id="bt-btn" class="bt-btn" aria-label="Włącz komputer"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v9M6.3 6.5a8 8 0 1 0 11.4 0"/></svg></button>
+      <p>Naciśnij, aby uruchomić Mój System</p>
+    </div>
+    <div id="bt-run" class="bt-run" hidden></div>
+  </div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>
